@@ -1,0 +1,16 @@
+  
+# 开发环境配置  
+spring:  
+  profiles: dev  
+
+    
+
+# 测试环境配置  
+spring:  
+  profiles: test  
+
+
+# 生产环境配置  
+spring:  
+  profiles: prod
+  
