@@ -20,8 +20,10 @@ public class Producer {
         DefaultMQProducer producer = new DefaultMQProducer("quickstart_producer");
         // 指定nameServer地址
         producer.setNamesrvAddr("192.168.192.10:9876;192.168.192.11:9876");
+        // 设置当发送失败的时候重试发送的次数
+        producer.setRetryTimesWhenSendFailed(10);
         producer.start();
-        for (int i=0; i<100;i++) {
+        for (int i=0; i<1;i++) {
             Message message = new Message("TopicQuickStart","TagA",
                     ("Hello Rcoketmq"+i).getBytes());
             SendResult send = producer.send(message);
