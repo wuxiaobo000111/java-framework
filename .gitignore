@@ -1,3 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea/
 .mvn/
+apollo/apollo-test/target/
+hs_err_pid14720.log
+replay_pid14720.log
+rocketmq/src/main/resources/
+rocketmq/src/test/
+rocketmq/target/
