@@ -1,9 +1,11 @@
 package com.bobo.rocketmq.model;
 
+import com.alibaba.rocketmq.client.consumer.AllocateMessageQueueStrategy;
 import com.alibaba.rocketmq.client.consumer.DefaultMQPushConsumer;
 import com.alibaba.rocketmq.client.consumer.listener.ConsumeConcurrentlyContext;
 import com.alibaba.rocketmq.client.consumer.listener.ConsumeConcurrentlyStatus;
 import com.alibaba.rocketmq.client.consumer.listener.MessageListenerConcurrently;
+import com.alibaba.rocketmq.client.consumer.rebalance.AllocateMessageQueueAveragelyByCircle;
 import com.alibaba.rocketmq.client.exception.MQClientException;
 import com.alibaba.rocketmq.common.message.MessageExt;
 import com.bobo.rocketmq.constants.Constants;
@@ -30,6 +32,9 @@ public class Consumer2 {
          * String[] tags = subString.split("\\|\\|");
          */
         consumer.subscribe("Topic1","Tag1 || Tag2 || Tag3");
+        // 设置负载均衡策略
+        AllocateMessageQueueAveragelyByCircle allocateMessageQueueAveragelyByCircle = new AllocateMessageQueueAveragelyByCircle();
+        consumer.setAllocateMessageQueueStrategy(allocateMessageQueueAveragelyByCircle);
         consumer.registerMessageListener(new MessageListenerConcurrently() {
             @Override
             public ConsumeConcurrentlyStatus consumeMessage(List<MessageExt> msgs, ConsumeConcurrentlyContext context) {
