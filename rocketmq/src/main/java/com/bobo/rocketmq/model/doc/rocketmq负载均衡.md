@@ -16,3 +16,15 @@
         AllocateMessageQueueAveragelyByCircle allocateMessageQueueAveragelyByCircle = new AllocateMessageQueueAveragelyByCircle();
         consumer.setAllocateMessageQueueStrategy(allocateMessageQueueAveragelyByCircle);
 ```
+
+### 两种消费方式
+>一共有两种消费方式，一种是集群消费是默认的，一种是广告消费,会发送给每个客户端，
+可以通过consumer.setMessageModel(MessageModel.BROADCASTING);设置，这个是设置为广告消费，
+consumer.setMessageModel(MessageModel.CLUSTERING);这是是设置没集群消费。
+
+### 不懂的地方
+>1.同步双写，异步刷盘；2.保证消息到的时序性；3保证消息的幂等性
+
+>同步双写(对于的是主从关系)，异步刷盘()。
+
+>rocketMQ消息重复消费是不可避免的，可以在业务里面加入消息去重的逻辑。 
