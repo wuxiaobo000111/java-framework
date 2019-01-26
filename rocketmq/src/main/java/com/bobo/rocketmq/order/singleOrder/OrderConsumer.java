@@ -25,18 +25,20 @@ public class OrderConsumer {
         consumer.setNamesrvAddr(Constants.ROCKETMQ_ADDR);
         consumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_FIRST_OFFSET);
         consumer.subscribe("TopicOrderTest","*");
-        consumer.registerMessageListener(new MessageListenerOrderly() {
-            @Override
-            public ConsumeOrderlyStatus consumeMessage(List<MessageExt> msgs, ConsumeOrderlyContext context) {
-                // 设置自动提交
-                context.setAutoCommit(true);
-                for (MessageExt msg : msgs) {
-                    System.out.println(msg + ",内容：" + new String(msg.getBody()));
-                }
-                return ConsumeOrderlyStatus.SUCCESS;
-            }
-        });
+        consumer.registerMessageListener(new MyMessageListenerOrderly());
         consumer.start();
         System.out.println("consumer started");
+    }
+}
+
+class MyMessageListenerOrderly implements MessageListenerOrderly {
+    @Override
+    public ConsumeOrderlyStatus consumeMessage(List<MessageExt> msgs, ConsumeOrderlyContext context) {
+        // 设置自动提交
+        context.setAutoCommit(true);
+        for (MessageExt msg : msgs) {
+            System.out.println(msg + ",内容：" + new String(msg.getBody()));
+        }
+        return ConsumeOrderlyStatus.SUCCESS;
     }
 }
