@@ -7,3 +7,7 @@ replay_pid14720.log
 rocketmq/src/main/resources/
 rocketmq/src/test/
 rocketmq/target/
+springboot-group/servlet-async/.gitignore
+springboot-group/servlet-async/mvnw
+springboot-group/servlet-async/mvnw.cmd
+springboot-group/servlet-async/target/

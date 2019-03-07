@@ -6,7 +6,11 @@
 
     <groupId>com.bobo.springboot</groupId>
     <artifactId>springboot-group</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>servlet-common</module>
+    </modules>
 
-    
+
 </project>
