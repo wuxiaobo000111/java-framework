@@ -11,3 +11,4 @@ springboot-group/servlet-async/.gitignore
 springboot-group/servlet-async/mvnw
 springboot-group/servlet-async/mvnw.cmd
 springboot-group/servlet-async/target/
+spring-cloud-group/eureka-server/target/
