@@ -1,0 +1,5 @@
+feign-client-config:
+  ConnectTimeout: 3000
+  ReadTimeout: 3000
+server:
+  port: 9000

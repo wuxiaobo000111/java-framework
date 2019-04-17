@@ -13,3 +13,4 @@ springboot-group/servlet-async/mvnw.cmd
 springboot-group/servlet-async/target/
 spring-cloud-group/eureka-server/target/
 spring-cloud-group/eureka-client/target/
+spring-cloud-group/feign-group/feign-demo/target/
