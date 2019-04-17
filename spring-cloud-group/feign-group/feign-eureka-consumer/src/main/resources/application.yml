@@ -1,0 +1,13 @@
+
+feign-client-config:
+  ConnectTimeout: 3000
+  ReadTimeout: 3000
+server:
+  port: 8084
+spring:
+  application:
+    name: feign-eureka-consumer
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

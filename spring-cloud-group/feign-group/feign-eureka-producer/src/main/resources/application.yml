@@ -1,0 +1,10 @@
+
+server:
+  port: 8083
+spring:
+  application:
+    name: feign-eureka-producer
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

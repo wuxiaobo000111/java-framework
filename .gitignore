@@ -14,3 +14,5 @@ springboot-group/servlet-async/target/
 spring-cloud-group/eureka-server/target/
 spring-cloud-group/eureka-client/target/
 spring-cloud-group/feign-group/feign-demo/target/
+spring-cloud-group/feign-group/feign-eureka-producer/target/
+spring-cloud-group/feign-group/feign-eureka-consumer/target/
