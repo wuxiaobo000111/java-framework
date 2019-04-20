@@ -5,6 +5,8 @@ server:
   port: 9000
 feign:
   httpclient:
+    enabled: false
+  okhttp:
     enabled: true
 #feign:
 #  compression:

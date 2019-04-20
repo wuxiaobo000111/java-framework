@@ -40,6 +40,14 @@
             <version>8.18.0</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/io.github.openfeign/feign-okhttp -->
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-okhttp</artifactId>
+            <version>9.2.0</version>
+        </dependency>
+
+
 
 
         <dependency>
