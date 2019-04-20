@@ -1,35 +1,47 @@
-server:
-  port: 8761
-eureka:
-  instance:
-    hostname: localhost
-  client:
-#   eureka服务端不向自己注册
-    register-with-eureka: false
-#   是否允许客户端向Eureka 注册表获取信息，一般服务器为设置为false,客户端设置为true
-    fetch-registry: false
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
-  server:
-    wait-time-in-ms-when-sync-empty: 0
-     # 是否开启自我保护机制
-        ## 在分布式系统设计里头，通常需要对应用实例的存活进行健康检查，这里比较关键的问题就是要处
-        #理好网络偶尔抖动或短暂不可用时造成的误判。另外Eureka Server端与Client端之间如果出现网
-        #络分区问题，在极端情况下可能会使得Eureka Server清空部分服务的实例列表，这个将严重影响到
-        #Eureka server的 availibility属性。因此Eureka server引入了SELF PRESERVATION机制。
-        ## Eureka client端与Server端之间有个租约，Client要定时发送心跳来维持这个租约，表示自
-        #己还存活着。 Eureka通过当前注册的实例数，去计算每分钟应该从应用实例接收到的心跳数，如果最
-        #近一分钟接收到的续约的次数小于指定阈值的话，则关闭租约失效剔除，禁止定时任务剔除失效的实例，从而保护注册信息。
-        # 此处关闭可以防止问题（测试环境可以设置为false）：Eureka server由于开启并引入了SELF
-        #PRESERVATION模式，导致registry的信息不会因为过期而被剔除掉，直到退出SELF PRESERVATION模式才能剔除
-#spring:
-#  application:
-#    name: eureka-server
 #server:
 #  port: 8761
 #eureka:
 #  instance:
 #    hostname: localhost
 #  client:
+##   eureka服务端不向自己注册
+#    register-with-eureka: false
+##   是否允许客户端向Eureka 注册表获取信息，一般服务器为设置为false,客户端设置为true
+#    fetch-registry: false
 #    serviceUrl:
-#      defaultZone: http://localhost:8760/eureka/
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+#  server:
+#    wait-time-in-ms-when-sync-empty: 0
+#     # 是否开启自我保护机制
+#        ## 在分布式系统设计里头，通常需要对应用实例的存活进行健康检查，这里比较关键的问题就是要处
+#        #理好网络偶尔抖动或短暂不可用时造成的误判。另外Eureka Server端与Client端之间如果出现网
+#        #络分区问题，在极端情况下可能会使得Eureka Server清空部分服务的实例列表，这个将严重影响到
+#        #Eureka server的 availibility属性。因此Eureka server引入了SELF PRESERVATION机制。
+#        ## Eureka client端与Server端之间有个租约，Client要定时发送心跳来维持这个租约，表示自
+#        #己还存活着。 Eureka通过当前注册的实例数，去计算每分钟应该从应用实例接收到的心跳数，如果最
+#        #近一分钟接收到的续约的次数小于指定阈值的话，则关闭租约失效剔除，禁止定时任务剔除失效的实例，从而保护注册信息。
+#        # 此处关闭可以防止问题（测试环境可以设置为false）：Eureka server由于开启并引入了SELF
+#        #PRESERVATION模式，导致registry的信息不会因为过期而被剔除掉，直到退出SELF PRESERVATION模式才能剔除
+
+
+#注册中心运行的端口号
+server:
+  port: 8760
+#注册中心应用名称
+spring:
+  application:
+      name: eureka-server
+#eureka.server.enableSelfPreservation:是否向注册中心注册自己
+#通过eureka.client.registerWithEureka：false和fetchRegistry：false来表明自己是一个eureka server.
+eureka:
+#  server:
+#      enableSelfPreservation: false
+  instance:
+      hostname: peer2
+      prefer-ip-address: false
+#      ip-address: 172.193.225.185
+#      instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+  client:
+      service-url:
+           defaultZone: http://peer1:8761/eureka/
+

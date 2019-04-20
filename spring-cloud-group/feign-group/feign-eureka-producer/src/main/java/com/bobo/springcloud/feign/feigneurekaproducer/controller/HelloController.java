@@ -13,6 +13,6 @@ public class HelloController {
 
     @RequestMapping(value = "/hello",method = RequestMethod.GET)
     public String hello(String name) {
-        return name+" hello";
+        return name+" hello from producer2";
     }
 }
