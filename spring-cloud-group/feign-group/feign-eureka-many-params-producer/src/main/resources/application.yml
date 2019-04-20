@@ -1,0 +1,10 @@
+
+server:
+  port: 8087
+spring:
+  application:
+    name: feign-eureka-many-params-producer
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.88.128:8761/eureka/,http://192.168.88.128:8760/eureka/
