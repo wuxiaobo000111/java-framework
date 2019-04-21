@@ -16,3 +16,4 @@ spring-cloud-group/eureka-client/target/
 spring-cloud-group/feign-group/feign-demo/target/
 spring-cloud-group/feign-group/feign-eureka-producer/target/
 spring-cloud-group/feign-group/feign-eureka-consumer/target/
+.gitignore
