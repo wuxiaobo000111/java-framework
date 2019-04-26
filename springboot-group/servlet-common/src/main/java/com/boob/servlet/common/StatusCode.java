@@ -1,7 +1,6 @@
 package com.boob.servlet.common;
 
 /**
- * @author wuxiaobo@didachuxing.com
  * @create 2019-03-06 22:56
  **/
 public class StatusCode {

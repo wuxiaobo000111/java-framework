@@ -8,7 +8,6 @@ import com.bobo.rocketmq.constants.Constants;
 
 /**
  * 生产者
- * @author wuxiaobo@didachuxing.com
  * @create 2019-01-21 19:39
  **/
 public class Producer {

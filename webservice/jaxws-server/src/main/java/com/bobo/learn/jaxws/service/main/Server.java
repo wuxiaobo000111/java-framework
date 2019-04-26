@@ -7,7 +7,6 @@ import org.apache.cxf.interceptor.LoggingOutInterceptor;
 import org.apache.cxf.jaxws.JaxWsServerFactoryBean;
 
 /**
- * @author wuxiaobo@didachuxing.com
  * @create 2019-03-11 22:19
  **/
 public class Server {

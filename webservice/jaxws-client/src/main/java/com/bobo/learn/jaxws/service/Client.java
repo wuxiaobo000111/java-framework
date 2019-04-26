@@ -3,7 +3,6 @@ package com.bobo.learn.jaxws.service;
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
 
 /**
- * @author wuxiaobo@didachuxing.com
  * @create 2019-03-11 23:09
  **/
 public class Client {

@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 
 /**
- * @author wuxiaobo@didachuxing.com
  * @create 2019-03-06 23:00
  **/
 public class ServletUtil {

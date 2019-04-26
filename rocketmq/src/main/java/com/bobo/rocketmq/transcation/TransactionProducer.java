@@ -15,7 +15,6 @@ import java.util.concurrent.TimeUnit;
 /**
  * 带有事务的生产者
  *
- * @author wuxiaobo@didachuxing.com
  * @create 2019-01-26 17:25
  **/
 public class TransactionProducer {

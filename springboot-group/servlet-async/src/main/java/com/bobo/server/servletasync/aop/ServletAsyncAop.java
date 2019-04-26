@@ -18,7 +18,6 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.concurrent.Callable;
 
 /**
- * @author wuxiaobo@didachuxing.com
  * @create 2019-03-07 10:00
  **/
 

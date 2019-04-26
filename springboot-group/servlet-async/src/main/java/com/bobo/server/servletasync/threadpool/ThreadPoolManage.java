@@ -12,7 +12,6 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @author wuxiaobo@didachuxing.com
  * @create 2019-03-06 22:01
  **/
 public class ThreadPoolManage implements InitializingBean, DisposableBean {

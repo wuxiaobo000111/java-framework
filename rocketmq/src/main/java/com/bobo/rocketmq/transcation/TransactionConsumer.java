@@ -13,7 +13,6 @@ import java.util.List;
 
 /**
  * 带有事务的消费者
- * @author wuxiaobo@didachuxing.com
  * @create 2019-01-26 17:43
  **/
 public class TransactionConsumer {

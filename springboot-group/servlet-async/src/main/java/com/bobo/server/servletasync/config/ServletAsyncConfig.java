@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * 配置信息
- * @author wuxiaobo@didachuxing.com
  * @create 2019-03-06 21:18
  **/
 @Configuration

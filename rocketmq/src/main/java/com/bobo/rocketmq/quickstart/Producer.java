@@ -10,7 +10,6 @@ import com.alibaba.rocketmq.remoting.exception.RemotingException;
 
 /**
  * 生产者
- * @author wuxiaobo@didachuxing.com
  * @create 2019-01-20 11:52
  **/
 public class Producer {

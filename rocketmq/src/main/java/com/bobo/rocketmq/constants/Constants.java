@@ -2,7 +2,6 @@ package com.bobo.rocketmq.constants;
 
 /**
  * 常量
- * @author wuxiaobo@didachuxing.com
  * @create 2019-01-21 18:34
  **/
 public class Constants {

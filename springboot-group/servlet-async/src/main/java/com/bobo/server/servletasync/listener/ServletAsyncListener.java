@@ -12,7 +12,6 @@ import java.io.IOException;
 import java.util.Map;
 
 /**
- * @author wuxiaobo@didachuxing.com
  * @create 2019-03-06 22:45
  **/
 @Slf4j

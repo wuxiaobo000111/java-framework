@@ -21,7 +21,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @author wuxiaobo@didachuxing.com
  * @create 2019-03-06 21:41
  **/
 public class ControllerExecutorService {

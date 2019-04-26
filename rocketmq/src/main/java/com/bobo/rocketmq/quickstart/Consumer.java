@@ -14,7 +14,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * 消费者
- * @author wuxiaobo@didachuxing.com
  * @create 2019-01-20 13:16
  **/
 public class Consumer {

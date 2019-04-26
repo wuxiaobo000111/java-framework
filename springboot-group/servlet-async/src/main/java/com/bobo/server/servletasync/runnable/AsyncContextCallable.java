@@ -4,7 +4,6 @@ import javax.servlet.AsyncContext;
 import java.util.concurrent.Callable;
 
 /**
- * @author wuxiaobo@didachuxing.com
  * @create 2019-03-06 23:18
  **/
 public abstract class AsyncContextCallable implements Runnable {

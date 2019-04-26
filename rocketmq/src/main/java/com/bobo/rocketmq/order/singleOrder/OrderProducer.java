@@ -14,7 +14,6 @@ import java.util.List;
 
 /**
  * 顺序消费生产者
- * @author wuxiaobo@didachuxing.com
  * @create 2019-01-26 14:48
  **/
 public class OrderProducer {

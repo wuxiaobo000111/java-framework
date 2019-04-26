@@ -15,7 +15,6 @@ import java.util.TimerTask;
 
 /**
  * 顺序消费者
- * @author wuxiaobo@didachuxing.com
  * @create 2019-01-26 14:53
  **/
 public class OrderConsumer {

@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Value;
 /**
  * 创建一个线程池
  *
- * @author wuxiaobo@didachuxing.com
  * @create 2019-03-06 21:17
  **/
 public class ThreadPoolFactory {
