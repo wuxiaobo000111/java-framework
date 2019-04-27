@@ -1,0 +1,9 @@
+server:
+  port: 8092
+spring:
+  application:
+    name: feign-eureka-hystrix-producer
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.88.128:8761/eureka/,http://192.168.88.128:8760/eureka/

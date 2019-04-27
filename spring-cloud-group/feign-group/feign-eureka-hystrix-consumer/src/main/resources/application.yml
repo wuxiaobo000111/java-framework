@@ -1,0 +1,20 @@
+server:
+  port: 8093
+spring:
+  application:
+    name: feign-eureka-hystrix-consumer
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.88.128:8761/eureka/,http://192.168.88.128:8760/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+feign-client-config.ConnectTimeout: 3000
+feign-client-config.ReadTimeout: 3000
+#开启feign中hystrix的调用
+feign:
+  hystrix:
+    enabled: true
