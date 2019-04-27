@@ -1,0 +1,17 @@
+server:
+  port: 8094
+spring:
+  application:
+    name: hystrix-eureka-turbine
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.88.128:8761/eureka/,http://192.168.88.128:8760/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+turbine:
+  app-config: hystrix-eureka-demo,feign-eureka-hystrix-consumer
+  cluster-name-expression: "'default'"
