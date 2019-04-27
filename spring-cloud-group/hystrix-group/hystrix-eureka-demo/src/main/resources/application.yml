@@ -1,0 +1,14 @@
+server:
+  port: 8091
+spring:
+  application:
+    name: hystrix-eureka-demo
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.88.128:8761/eureka/,http://192.168.88.128:8760/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
