@@ -64,7 +64,6 @@ public class TransactionProducer {
 }
 
 /**
- * @author wuxiaobo@didachuxing.com
  * @date
  * @see com.alibaba.rocketmq.client.producer.LocalTransactionExecuter
  */
