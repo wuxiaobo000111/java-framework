@@ -16,4 +16,6 @@ java开源框架
 |hystrix-eureka-demo|eureka作为注册中心,Hystrix的简单小例子|
 |hystrix-eureka-turbine|eureka作为注册中心,hystrix和turbine组合使用|
 |hystrix-eureka-exception|eureka作为注册中心，Hystrix的异常说明|
-|hystrix-eureka-cache|eureka作为注册中心，Hystrix的缓存使用|
+|hystrix-eureka-cache|eureka作为注册中心，Hystrix的缓存使用
+|hystrix-eureka-cache-producer|eureka作为注册中心,Hystrix使用缓存的服务端|
+|hystrix-eureka-collasper|eureka作为注册中心,Hystrix请求合并|
