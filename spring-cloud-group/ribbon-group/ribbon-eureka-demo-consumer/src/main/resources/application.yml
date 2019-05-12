@@ -7,6 +7,16 @@ eureka:
 spring:
   application:
     name: ribbon-eureka-demo-consumer
-
-
-
+ribbon-eureka-demo-producer:
+  ribbon:
+    ConnectTimeout: 30000
+    ReadTimeout: 30000
+    # 对第一次请求的服务的重试次数
+    ManAutoRetries: 1
+    # 要重试的下一个服务的最大数量。
+    MaxAutoRetriesNextServer: 1
+    OktoRetryOnAllOpreations: all
+ribbon:
+  eager-load:
+    enabled: true
+    clients: ribbon-eureka-demo-producer
