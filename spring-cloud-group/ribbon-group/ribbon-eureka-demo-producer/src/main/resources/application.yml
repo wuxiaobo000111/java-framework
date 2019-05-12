@@ -1,0 +1,12 @@
+server:
+  port: 8100
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.88.128:8761/eureka/,http://192.168.88.128:8760/eureka/
+spring:
+  application:
+    name: ribbon-eureka-demo-producer
+
+
+
