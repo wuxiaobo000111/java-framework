@@ -20,3 +20,5 @@ java开源框架
 |hystrix-eureka-cache-producer|eureka作为注册中心,Hystrix使用缓存的服务端|
 |hystrix-eureka-collasper|eureka作为注册中心,Hystrix请求合并|
 |hystrix-eureka-thread|eureka作为注册中心,Hystrix线程传递|
+|ribbon-eureka-demo-producer|eureka作为注册中心,ribbon小例子服务端|
+|ribbon-eureka-demo-consumer|eureka作为注册中心,ribbon小例子客户端|
