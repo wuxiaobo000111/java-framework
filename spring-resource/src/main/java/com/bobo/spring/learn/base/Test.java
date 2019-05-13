@@ -1,10 +1,13 @@
 package com.bobo.spring.learn.base;
 
 import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
 
 public class Test {
@@ -21,9 +24,9 @@ public class Test {
         XmlBeanFactory factory = new XmlBeanFactory(new ClassPathResource("mytest.xml"));
         MyTestBean bean = factory.getBean(MyTestBean.class);
         System.out.println(bean.getTestStr());
-
-        MyTestBean myTestBean = BeanUtils.instantiateClass(MyTestBean.class);
-        System.out.println(myTestBean.getTestStr());
+        BeanDefinition myTestBean = factory.getBeanDefinition("myTestBean");
+        String testStr = (String) myTestBean.getAttribute("testStr");
+        System.out.println(testStr);
     }
 
 }
