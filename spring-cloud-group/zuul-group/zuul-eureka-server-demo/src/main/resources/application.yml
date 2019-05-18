@@ -7,9 +7,37 @@ eureka:
 spring:
   application:
     name: zuul-eureka-server-demo
+ribbon:
+  eureka:
+    enabled: false
 zuul:
   routes:
     client-a:
       path: /client/**
-      serviceId: zuul-eureka-client-demo
+      serviceId: zuul-eureka-client
+  prefix: /bobo
+# 设置敏感头信息
+  sensitive-headers: Cookie.Set-Cookie
+# 解决重定向暴露服务地址的问题。
+  add-host-header: true
+  # 开启重试
+  retryable: true
+ribbon:
+  MaxAutoRetries: 1 #同一个服务重试的次数(除去首次)
+  # 切换相同服务数量
+  MaxAutoRetriesNextServer: 1
+
+#  ignored-services: client-b
+#  ignored-patterns: /**/danger/**
+zuul-eureka-client :
+  ribbon:
+    listOfServers: http://localhost:8103/,http://localhost:8104/
+#zuul:
+#  routes:
+#    zuul-eureka-client-demo: /client/**
+#zuul:
+#  routes:
+#    client-a:
+#      path: /client/**
+#      serviceId: zuul-eureka-client-demo
 
