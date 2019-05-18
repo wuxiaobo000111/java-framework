@@ -22,3 +22,5 @@ java开源框架
 |hystrix-eureka-thread|eureka作为注册中心,Hystrix线程传递|
 |ribbon-eureka-demo-producer|eureka作为注册中心,ribbon小例子服务端|
 |ribbon-eureka-demo-consumer|eureka作为注册中心,ribbon小例子客户端|
+|zuul-eureka-server-demo|eureka作为注册中心,使用zuul作为网关服务|
+|zuul-eureka-client-demo|eureka作为注册中心,当调用网关服务的时候的项目|

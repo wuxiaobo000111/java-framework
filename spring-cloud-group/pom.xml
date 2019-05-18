@@ -12,6 +12,7 @@
         <module>feign-group</module>
         <module>hystrix-group</module>
         <module>ribbon-group</module>
+        <module>zuul-group</module>
     </modules>
 
 
