@@ -24,3 +24,5 @@ java开源框架
 |ribbon-eureka-demo-consumer|eureka作为注册中心,ribbon小例子客户端|
 |zuul-eureka-server-demo|eureka作为注册中心,使用zuul作为网关服务|
 |zuul-eureka-client-demo|eureka作为注册中心,当调用网关服务的时候的项目|
+|zuul-eureka-gray-zuul-server|eureka作为注册中心,使用zuul作为网关服务,验证基于Filter的灰度实现|
+|zuul-eureka-gray-zuul-client|eureka作为注册中心,,使用zuul作为网关服务,验证基于Filter的灰度实现的接口|

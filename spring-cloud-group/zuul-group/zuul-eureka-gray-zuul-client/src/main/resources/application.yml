@@ -1,0 +1,17 @@
+server:
+  port: 8108
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.88.128:8761/eureka/,http://192.168.88.128:8760/eureka/
+  instance:
+    metadata-map:
+      gray: noGray
+spring:
+  application:
+    name: zuul-eureka-gray-zuul-client
+service-flag: noGray
+
+
+
+
