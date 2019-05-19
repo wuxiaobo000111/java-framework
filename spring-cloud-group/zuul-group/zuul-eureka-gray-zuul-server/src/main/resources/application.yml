@@ -12,3 +12,21 @@ zuul:
     client-a:
       path: /client/**
       serviceId: zuul-eureka-gray-zuul-client
+#  retryable: true
+#ribbon:
+#  #重试机制配置
+#  ConnectTimeout: 3000
+#  ReadTimeout: 60000
+#  MaxAutoRetries: 1 #对第一次请求的服务的重试次数
+#  MaxAutoRetriesNextServer: 1 #要重试的下一个服务的最大数量（不包括第一个服务）
+#  OkToRetryOnAllOperations: true
+#开启zuul的饥饿加载
+#  ribbon:
+#    eager-load:
+#      enabled: false
+#ribbon:
+#  okhttp:
+#    enabled: true
+#  http:
+#    client:
+#      enabled: false

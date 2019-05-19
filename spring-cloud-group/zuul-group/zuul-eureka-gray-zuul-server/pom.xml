@@ -38,6 +38,17 @@
             <artifactId>ribbon-discovery-filter-spring-cloud-starter</artifactId>
             <version>2.1.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>3.11.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.retry</groupId>
+            <artifactId>spring-retry</artifactId>
+            <version>1.2.2.RELEASE</version>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
