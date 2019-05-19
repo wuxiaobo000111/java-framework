@@ -1,0 +1,11 @@
+server:
+  port: 8105
+  servlet:
+    context-path: /auth
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.88.128:8761/eureka/,http://192.168.88.128:8760/eureka/
+spring:
+  application:
+    name: zuul-eureka-auth-server

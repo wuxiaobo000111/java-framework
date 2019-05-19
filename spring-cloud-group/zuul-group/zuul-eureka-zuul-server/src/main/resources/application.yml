@@ -1,0 +1,25 @@
+server:
+  port: 8104
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.88.128:8761/eureka/,http://192.168.88.128:8760/eureka/
+spring:
+  application:
+    name: zuul-eureka-zuul-server
+zuul:
+  routes:
+    client-a:
+      path: /client/**
+      serviceId: zuul-eureka-client-demo
+
+security:
+  oauth2:
+    client:
+      access-token-uri: http://localhost:7777/uaa/oauth/token #令牌端点
+      user-authorization-uri: http://localhost:7777/uaa/oauth/authorize #授权端点
+      client-id: zuul_server #OAuth2客户端ID
+      client-secret: secret #OAuth2客户端密钥
+    resource:
+      jwt:
+        key-value: springcloud123 #使用对称加密方式，默认算法为HS256
