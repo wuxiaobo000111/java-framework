@@ -1,0 +1,13 @@
+server:
+  port: 8111
+spring:
+  application:
+    name: consul-demo-client
+  cloud:
+    consul:
+      discovery:
+        service-name: consul-demo-client
+      host: localhost
+      port: 8500
+feign-client-config.ConnectTimeout: 3000
+feign-client-config.ReadTimeout: 3000
