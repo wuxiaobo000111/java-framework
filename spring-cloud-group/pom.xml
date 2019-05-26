@@ -13,6 +13,7 @@
         <module>hystrix-group</module>
         <module>ribbon-group</module>
         <module>zuul-group</module>
+        <module>consul-group</module>
     </modules>
 
 

@@ -1,0 +1,11 @@
+server:
+  port: 8109
+spring:
+  application:
+    name: consul-server
+  cloud:
+    consul:
+      discovery:
+        service-name: consul-server
+      host: localhost
+      port: 8500
