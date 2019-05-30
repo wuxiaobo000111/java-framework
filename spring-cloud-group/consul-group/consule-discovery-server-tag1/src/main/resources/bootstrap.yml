@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: consule-discovery-server-tag
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+#      如果是多个,请用逗号隔开
+        tags: tag1
+server:
+  port: 8113
