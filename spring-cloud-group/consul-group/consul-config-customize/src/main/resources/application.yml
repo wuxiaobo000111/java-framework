@@ -1,0 +1,5 @@
+server:
+  port: 8119
+spring:
+  profiles:
+    active: test    # 指定启动时的 profiles
