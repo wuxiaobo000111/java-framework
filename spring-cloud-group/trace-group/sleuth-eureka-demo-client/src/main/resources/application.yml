@@ -1,0 +1,19 @@
+server:
+  port: 8121
+spring:
+  application:
+    name: sleuth-eureka-demo-client
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    sender:
+      type: rabbit
+    service:
+      name: sleuth-eureka-demo-client
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.88.128:8761/eureka/,http://192.168.88.128:8760/eureka/
+  zipkin:
+    base-url: http://localhost:9411/

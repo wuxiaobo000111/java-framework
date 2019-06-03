@@ -14,6 +14,7 @@
         <module>ribbon-group</module>
         <module>zuul-group</module>
         <module>consul-group</module>
+        <module>trace-group</module>
     </modules>
 
 
