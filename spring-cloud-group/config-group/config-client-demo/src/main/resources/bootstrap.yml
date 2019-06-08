@@ -5,4 +5,11 @@ spring:
             uri: http://localhost:8125
             name: config-info
             profile: dev
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
