@@ -1,0 +1,6 @@
+server:
+  port: 8126
+
+spring:
+  application:
+    name: config-client-demo

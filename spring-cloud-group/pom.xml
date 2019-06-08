@@ -15,6 +15,7 @@
         <module>zuul-group</module>
         <module>consul-group</module>
         <module>trace-group</module>
+        <module>config-group</module>
     </modules>
 
 
