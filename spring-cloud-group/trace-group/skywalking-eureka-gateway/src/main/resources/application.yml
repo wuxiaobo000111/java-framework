@@ -1,0 +1,38 @@
+server:
+  port: 8122
+spring:
+  application:
+    name: skywalking-eureka-gateway
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.88.133:8761/eureka/,http://192.168.88.133:8760/eureka/
+
+
+zuul:
+  routes:
+    service-a:
+      path: /client/**
+      serviceId: skywalking-eureka-server-a
+ribbon:
+  eureka:
+    enabled: true
+  ReadTimeout: 30000
+  ConnectTimeout: 30000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+  OkToRetryOnAllOperations: false
+
+
+hystrix:
+  threadpool:
+    default:
+      coreSize: 1000 ##并发执行的最大线程数，默认10
+      maxQueueSize: 1000 ##BlockingQueue的最大队列数
+      queueSizeRejectionThreshold: 500 ##即使maxQueueSize没有达到，达到queueSizeRejectionThreshold该值后，请求也会被拒绝
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 120001

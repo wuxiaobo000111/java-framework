@@ -1,0 +1,10 @@
+server:
+  port: 8123
+spring:
+  application:
+    name: skywalking-eureka-server-a
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.88.133:8761/eureka/,http://192.168.88.133:8760/eureka/
+
