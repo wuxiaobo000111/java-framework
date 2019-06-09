@@ -4,8 +4,8 @@ spring:
       server:
         git:
           uri: https://github.com/wuxiaobo000111/{application}
-          username: 2244027504@qq.com
-          password: github000111
+          username:
+          password:
           search-paths: SC-BOOK-CONFIG
   application:
     name: config-server-placeholders-demo
