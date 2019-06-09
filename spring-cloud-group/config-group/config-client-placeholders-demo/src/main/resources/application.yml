@@ -1,0 +1,6 @@
+server:
+  port: 8128
+
+spring:
+  application:
+    name: config-client-placeholders-demo
