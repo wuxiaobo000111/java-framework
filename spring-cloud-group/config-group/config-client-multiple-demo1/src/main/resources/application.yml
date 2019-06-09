@@ -1,0 +1,6 @@
+server:
+  port: 8130
+
+spring:
+  application:
+    name: config-client-multiple-demo1

@@ -1,0 +1,7 @@
+spring:
+    cloud:
+        config:
+            label: master
+            uri: http://localhost:8129
+            name: special-config
+            profile: dev
