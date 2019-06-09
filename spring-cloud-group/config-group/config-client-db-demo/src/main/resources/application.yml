@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: config-client-db-demo
+
+server:
+  port: 8132
+
+logging:
+      level:
+          root: INFO
