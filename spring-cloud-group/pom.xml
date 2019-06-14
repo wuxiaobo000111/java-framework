@@ -16,6 +16,7 @@
         <module>consul-group</module>
         <module>trace-group</module>
         <module>config-group</module>
+        <module>swagger-group</module>
     </modules>
 
 
