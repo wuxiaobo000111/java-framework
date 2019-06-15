@@ -17,6 +17,7 @@
         <module>trace-group</module>
         <module>config-group</module>
         <module>swagger-group</module>
+        <module>gateway-group</module>
     </modules>
 
 
