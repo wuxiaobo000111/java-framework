@@ -11,6 +11,11 @@ spring:
         predicates:
         # 在这里时间之后的都会成功,否则都不会成功，after断言工厂
         - After=2020-06-16T11:50:10.785+08:00[Asia/Shanghai]
+      - id: before_route
+        uri: http://www.taobao.com
+        predicates:
+          - Path=/taobao
+          - Before=2020-06-16T11:50:10.785+08:00[Asia/Shanghai]
 
 eureka:
   client:
