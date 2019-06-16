@@ -16,7 +16,14 @@ spring:
         predicates:
           - Path=/taobao
           - Before=2020-06-16T11:50:10.785+08:00[Asia/Shanghai]
-
+      - id: between_route
+        uri: http://www.taobao.com
+        predicates:
+          - Path=/between
+          - name: Between
+            args:
+              datetime1: 2018-06-16T11:50:10.785+08:00[Asia/Shanghai]
+              datetime2: 2020-06-16T11:50:10.785+08:00[Asia/Shanghai]
 eureka:
   client:
     serviceUrl:
