@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: geteway-eureka-consumer
+server:
+  port: 8143
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.88.133:8761/eureka/,http://192.168.88.133:8760/eureka/
