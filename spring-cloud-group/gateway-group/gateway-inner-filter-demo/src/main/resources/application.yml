@@ -6,13 +6,20 @@ spring:
   cloud:
       gateway:
         routes:
-        - id: add_request_parameter_route
-          uri: http://localhost:8140
-          filters:
-          - AddRequestHeader=X-Request-Acme, ValueB
-          # 不能少
-          predicates:
-          - After=2017-01-20T17:42:47.789-07:00[America/Denver]
+#        - id: add_request_head_route
+#          uri: http://localhost:8140
+#          filters:
+#          - AddRequestHeader=X-Request-Acme, ValueB
+#          # 不能少
+#          predicates:
+#          - After=2017-01-20T17:42:47.789-07:00[America/Denver]
+         - id: add_request_parameter_route
+           uri: http://localhost:8140
+           filters:
+           - AddRequestParameter=example, wuxiaobo
+           # 不能少
+           predicates:
+           - After=2017-01-20T17:42:47.789-07:00[America/Denver]
 eureka:
   client:
     serviceUrl:
