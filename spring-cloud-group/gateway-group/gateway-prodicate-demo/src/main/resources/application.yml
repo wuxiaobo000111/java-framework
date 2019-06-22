@@ -25,10 +25,18 @@ spring:
               datetime1: 2018-06-16T11:50:10.785+08:00[Asia/Shanghai]
               datetime2: 2020-06-16T11:50:10.785+08:00[Asia/Shanghai]
       - id: cookie_route
-        uri: http://localhost:8084/hello
+        uri: http://localhost:8084
         predicates:
           - Path=/test
           - Cookie=name,wuxiaobo
+      - id: header_route
+        uri: http://localhost:8084
+        predicates:
+          - Path=/hello
+          - Header=X-Request-Id, \d+
+      discovery:
+        locator:
+          enabled: true
 eureka:
   client:
     serviceUrl:
