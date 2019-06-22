@@ -49,6 +49,11 @@ spring:
         predicates:
           - Path=/query
           - Query=name, wuxiaobo
+      - id: addr_route
+        uri: https://baidu.com
+        predicates:
+          - Path=/addr
+          - RemoteAddr=0:0:0:0:0:0:0:1
       discovery:
         locator:
           enabled: true
