@@ -34,6 +34,11 @@ spring:
         predicates:
           - Path=/hello
           - Header=X-Request-Id, \d+
+      - id: host_route
+        uri: https://jd.com
+        predicates:
+          - Path=/host
+          - Host=**.baidu.com:8080
       discovery:
         locator:
           enabled: true
