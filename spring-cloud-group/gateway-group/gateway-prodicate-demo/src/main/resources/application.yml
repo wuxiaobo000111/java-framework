@@ -39,6 +39,11 @@ spring:
         predicates:
           - Path=/host
           - Host=**.baidu.com:8080
+      - id: method_route
+        uri: https://jd.com
+        predicates:
+          - Path=/method
+          - Method=Get
       discovery:
         locator:
           enabled: true
