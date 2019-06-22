@@ -44,6 +44,11 @@ spring:
         predicates:
           - Path=/method
           - Method=Get
+      - id: query_route
+        uri: https://baidu.com
+        predicates:
+          - Path=/query
+          - Query=name, wuxiaobo
       discovery:
         locator:
           enabled: true
