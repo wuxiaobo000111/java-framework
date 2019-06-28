@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: gateway-custom-gatewayfilter
+  cloud:
+    gateway:
+      routes:
+        - id:
+          uri:
+          pr
+server:
+  port: 8144
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.88.133:8761/eureka/,http://192.168.88.133:8760/eureka/
+logging:
+  level:
+    org.springframework.cloud.gateway: debug
