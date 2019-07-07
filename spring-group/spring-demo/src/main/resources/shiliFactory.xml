@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean class="com.spring.bobo.learn.bean.shiliFactory.BeingFactory" id="beingFactory"/>
+    <bean id="dog" factory-bean="beingFactory" factory-method="getBeing">
+        <constructor-arg value="dog"/>
+        <property name="msg" value="我是狗"/>
+    </bean>
+    <bean factory-bean="beingFactory" factory-method="getBeing">
+        <constructor-arg value="cat"/>
+        <property name="msg" value="我是猫"/>
+    </bean>
+</beans>
