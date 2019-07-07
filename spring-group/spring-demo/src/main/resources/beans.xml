@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!--<bean class="com.spring.bobo.learn.ioc.demo.Phone" id="phone">-->
+        <!--<property name="name" value="小米8"/>-->
+        <!--<property name="price" value="3600"/>-->
+    <!--</bean>-->
+    <!--<bean class="com.spring.bobo.learn.ioc.demo.Person" id="person">-->
+        <!--<property name="name" value="吴晓波"/>-->
+        <!--<property name="phone" ref="phone"/>-->
+    <!--</bean>-->
+    <bean class="com.spring.bobo.learn.ioc.demo.Phone" id="phone">
+        <constructor-arg index="0" name="price" value="3600"/>
+        <constructor-arg index="1" name="name" value="小米8"/>
+    </bean>
+    <bean class="com.spring.bobo.learn.ioc.demo.Person" id="person" scope="singleton">
+        <constructor-arg index="0" name="name" value="吴晓波"/>
+        <constructor-arg index="1" name="phone" ref="phone"/>
+    </bean>
+    <alias name="phone" alias="wuxiaobo"/>
+</beans>
