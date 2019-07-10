@@ -1,0 +1,7 @@
+my:
+  hello:
+    name: 吴晓波
+    hometown: 河南
+    age: 18
+server:
+  port: 9000
