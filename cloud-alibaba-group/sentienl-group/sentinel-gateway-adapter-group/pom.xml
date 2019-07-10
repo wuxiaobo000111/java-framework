@@ -3,19 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>cloud-alibaba-group</artifactId>
+        <artifactId>sentienl-group</artifactId>
         <groupId>com.bobo.cloud.alibaba.learn</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.bobo.cloud.alibaba.learn</groupId>
-    <artifactId>sentienl-group</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>sentinel-demo</module>
-        <module>sentinel-gateway-adapter-group</module>
-    </modules>
+    <artifactId>sentinel-gateway-adapter-group</artifactId>
 
 
 </project>
